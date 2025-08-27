@@ -1,0 +1,139 @@
+/* ActivitySidebar styles - consolidated */
+.activity-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.activity-header .btn--icon {
+  margin: 0 10px;
+  background-color: var(--light-blue);
+  border: none;
+}
+
+.activity-header .btn--icon i {
+  color: var(--primary-blue)
+}
+
+
+.activity-company {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+}
+
+.activity-date {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.note-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.note-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.note-item--selected {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 1px var(--primary-blue);
+}
+
+.note-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.note-type-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.note-icon {
+  font-size: var(--font-size-sm);
+}
+
+.note-type {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-700);
+}
+
+.note-status {
+  background-color: var(--gray-100);
+  color: var(--gray-600);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.note-content {
+  margin-bottom: var(--spacing-lg);
+  font-size: 13px;
+  color: var(--gray-600);
+}
+
+.note-text {
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+.note-associations {
+  font-size: var(--font-size-xs);
+  color: var(--blue-shade);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.note-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.note-author-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-author,
+.note-date {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+
+.note-author .bx,
+.note-date .bx {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .notes-list {
+    padding: 10px 0;
+  }
+}

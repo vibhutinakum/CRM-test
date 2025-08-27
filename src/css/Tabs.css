@@ -1,0 +1,141 @@
+/* Tabs styles - consolidated */
+.tabs {
+
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.tabs--activity .tab-list {
+  display: flex;
+}
+
+.tabs--activity .tab-button {
+  flex: 1;
+}
+
+.tab-list {
+  display: flex;
+  border-bottom: 1px solid var(--gray-200);
+  overflow-x: auto;
+  background: var(--gray-dark);
+}
+
+.tab-button {
+  background: none;
+  padding: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+  position: relative;
+  border: none;
+  flex: 1;
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.tab-button:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.tab-button--active {
+  color: var(--primary-blue);
+}
+
+.tab-content {
+  padding: var(--spacing-xl);
+  min-height: 200px;
+}
+
+.candidate-detail__left .tab-button--active {
+  border-bottom: 2px solid var(--primary-blue);
+  background-color: var(--white);
+}
+
+/* Mobile Accordion Styles */
+.tabs--mobile-accordion {
+  box-shadow: none;
+  background: transparent;
+}
+
+.accordion-item {
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 16px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--gray-700);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-align: left;
+}
+
+.accordion-header:hover {
+  background-color: var(--gray-50);
+}
+
+.accordion-header--active {
+  color: var(--primary-blue);
+  background-color: var(--blue-50, #f0f9ff);
+}
+
+.accordion-icon {
+  font-size: 12px;
+  color: var(--gray-400);
+  transition: transform var(--transition-fast);
+  line-height: 1;
+}
+
+.accordion-icon--open {
+  transform: rotate(180deg);
+  color: var(--primary-blue);
+}
+
+.accordion-content {
+  padding: 16px 10px 16px;
+  border-top: 1px solid var(--gray-100);
+  background: var(--white);
+}
+
+@media (max-width: 1665px) {
+  .tab-button {
+    padding: 16px 10px;
+  }
+}
+
+@media (max-width: 1665px) {
+  .tab-button {
+    flex: none;
+  }
+
+  .tab-list {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Hide the original tab styles on mobile since we're using accordion */
+  .tabs:not(.tabs--mobile-accordion) .tab-list {
+    display: none;
+  }
+
+  .tabs:not(.tabs--mobile-accordion) .tab-content {
+    display: none;
+  }
+}

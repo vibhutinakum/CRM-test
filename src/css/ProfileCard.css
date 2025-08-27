@@ -1,0 +1,305 @@
+/* ProfileCard styles - consolidated */
+.profile-card {
+  background: var(--white);
+  /* border: 1px solid var(--gray-200); */
+  /* border-radius: var(--border-radius-lg); */
+  /* padding: var(--spacing-xl); */
+  /* box-shadow: var(--shadow-sm); */
+}
+
+.profile-card__header {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.profile-avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar__image {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius-full);
+  object-fit: cover;
+}
+
+.avatar__status-badges {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  display: flex;
+  gap: 2px;
+}
+
+
+.profile-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.profile-info__name {
+  font-size: 18px;
+  font-weight: var(--font-weight-semibold);
+  color: var(--gray-900);
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.candidate-name {
+  margin-right: 10px;
+}
+
+.profile-info__position {
+  font-size: var(--font-size-base);
+  color: var(--gray-600);
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+}
+
+.profile-info__location {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  margin: 0;
+}
+
+.profile-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.profile-actions__secondary {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.profile-card .btn--icon {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-size: var(--font-size-sm);
+}
+
+.btn--icon:hover {
+  background-color: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+.profile-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.profile-nav__btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-size: var(--font-size-sm);
+}
+
+.profile-nav__btn:hover {
+  background-color: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+.profile-nav__btn--active {
+  background-color: var(--primary-blue);
+  border-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.profile-nav__avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--border-radius-full);
+}
+
+.contact-item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.contact-icon {
+  font-size: var(--font-size-lg);
+  width: 20px;
+  text-align: center;
+  color: var(--gray-700)
+}
+
+.contact-text {
+  color: var(--blue-shade);
+  font-size: var(--font-size-sm);
+}
+
+.profile-card__activity {
+  padding: 10px 15px;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.activity-text {
+  font-size: var(--font-size-xs);
+  color: var(--gray-500);
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.activity-text>div {
+  display: flex;
+  align-items: center;
+}
+
+.activity-text>div .bx {
+  font-size: 16px;
+  margin-right: 6px;
+}
+
+/* Add these styles to your existing ProfileCard.css */
+
+.profile-social-links {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.social-link img {
+  height: 24px;
+  width: 24px;
+}
+
+/* If no social accounts are available, ensure the layout still looks good */
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Tooltip for social links (optional enhancement) */
+.social-link::before {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+  margin-bottom: 5px;
+}
+
+.social-link:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  .profile-card__header {
+    gap: 10px;
+  }
+
+  .avatar__image {
+    height: 50px;
+    width: 50px;
+  }
+
+  .profile-info {
+    gap: 0;
+  }
+
+  .profile-info__position {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-info__position {
+    flex-direction: column;
+    gap: 0;
+    margin: 10px 0;
+  }
+
+  .profile-card__activity {
+    flex-direction: column;
+    background-color: var(--gray-bg);
+  }
+
+  .profile-card__header {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .profile-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .profile-nav {
+    justify-content: center;
+  }
+
+  .profile-social-links {
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .social-link {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  .profile-info__name {
+    flex-direction: column;
+  }
+
+  .contact-item-wrapper {
+    gap: 0;
+  }
+}
