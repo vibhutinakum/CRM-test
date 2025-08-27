@@ -22,7 +22,6 @@ src/
 │   ├── Tabs.tsx         # Reusable tabs component
 │   ├── AssignedJobs.tsx # Jobs assigned to candidate
 │   ├── ActivitySidebar.tsx # Activity feed and notes
-│   ├── Footer.tsx       # Sticky footer with actions
 │   ├── Button.tsx       # Reusable button component
 │   └── CandidateDetail.tsx # Main page component
 ├── types/               # TypeScript type definitions
@@ -71,11 +70,6 @@ src/
 - Notes and calls
 - User activity information
 
-### Footer
-- Sticky bottom bar
-- Action buttons
-- Responsive layout
-
 ## CSS Variables
 
 The application uses CSS custom properties for consistent theming:
@@ -120,7 +114,7 @@ The application uses CSS custom properties for consistent theming:
 
 ### Responsive Design
 - Mobile-first approach
-- Breakpoints at 768px and 1200px
+- Breakpoints at 768px
 - Flexible grid layouts
 
 ## Browser Support
